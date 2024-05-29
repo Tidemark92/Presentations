@@ -1,0 +1,369 @@
+\documentclass[professionalfont, handout, 12pt]{beamer} %, handout
+
+
+
+%\usepackage{pxfonts}
+%\usepackage{eulervm}
+
+%\documentclass[sans,mathserif]{beamer}
+%\usepackage{kerkis} % Kerkis roman and sans
+%\usepackage{kmath}
+
+
+%\documentclass[serif, professionalfont]{beamer} %
+%\usepackage[T1]{fontenc} % Needed for Type1 Concrete
+%\usepackage{concrete}
+
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsthm,amssymb,amsfonts,amsmath} 
+\usepackage{proof}
+\usepackage[mathscr]{eucal}
+\usepackage{amssymb,mathtools}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+\usepackage{comment}
+\usepackage{pifont}
+\usepackage{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{plotmarks}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{remark}{Remark}
+\newtheorem{cor}[thm]{Corollary}
+ 
+\theoremstyle{definition}
+\newtheorem{df}{Definition}
+       
+  
+\usepackage{epsfig}
+%\usepackage{amsmath}
+%\usepackage{mathrsfs}
+%\usepackage[all]{xy}  
+%\usepackage{proof}    %%proof.style file
+           
+
+\newcommand{\tcb}[1]{\textcolor{blue}{#1}}
+\newcommand{\tcr}[1]{\textcolor{red}{#1}}  
+\newcommand{\tcc}[1]{\textcolor{cyan}{#1}}
+\newcommand{\tcg}[1]{\textcolor{green}{#1}} 
+\newcommand{\tcm}[1]{\textcolor{magenta}{#1}}      
+
+\newcommand{\omt}{\mathop{\curlywedge}}
+  
+    
+\newcommand{\Lra}{\: \Leftrightarrow \:}
+\newcommand{\m}[1]{{\mathbf {#1} }}
+%\newcommand{\m}[1]{{\mbox{\uppercase {\bf {#1}}}}}
+%\newcommand{\N}[1]{{{ \m N_{#1}}}}
+\newcommand{\Rl}{ {\mbox{$\mathcal{RL}  $}}}
+\newcommand{\Rlc}{ {\mbox{$\mathcal{RL}^C  $}}}
+\newcommand{\Ra}{{ \:\; \Rightarrow \:\; }}
+%\newcommand{\Ra}{{\mbox{$ \: \Rightarrow \: $}}}
+\newcommand{\Rar}{{ \: \Rightarrow \: }}
+\newcommand{\La}{{\mbox{$ \: \Leftarrow \: $}}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\fa}{\: \forall}
+\newcommand{\lan}{(}
+\newcommand{\ran}{)}
+\newcommand{\rl}{{residuated lattice }}
+\newcommand{\rls}{{residuated lattices }}
+\newcommand{\T}{\top}
+\newcommand{\jn}{\vee}
+\newcommand{\mt}{\wedge}
+\newcommand{\ror}{\: $ or $ \:}
+\newcommand{\rand}{\: $ and $ \:}
+\newcommand{\Tg}{\lan \T \ran}
+\newcommand{\set}[2]{{\mbox{$ \{ #1 \: | \: #2 \}  $}}}
+\newcommand{\ex}{\exists}
+\newcommand{\eq}{\approx}
+\newcommand{\eqv}{\cong}
+\newcommand{\sbs}{\subseteq}
+\newcommand{\sps}{\supseteq}
+\newcommand{\vr}{{\mbox{$\mathcal{V}$}}}
+\newcommand{\Vr}{{\mbox{$ \mathcal{V} \: $ }}}
+\newcommand{\vrg}[1]{{\mbox{ $ \mathcal{V}  (\m #1) $}}}
+\newcommand{\vs}{\emptyset}
+\newcommand{\cov}{\prec}
+\newcommand{\rd}{{/}}
+\newcommand{\ld}{{\setminus}}
+%\newcommand{\qed}{\hfill$\bullet$}
+\newcommand{\ol}{\overline}
+%\newcommand{\ua}{\hspace{.04in} \uparrow \hspace{-.04in}}
+\newcommand{\ua}{\mathop{\uparrow}}
+\newcommand{\da}{\hspace{.01in} \downarrow \hspace{-.01in}}
+\newcommand{\dm}{\stackrel{\cdot}{-}}
+\newcommand{\md}{\stackrel{-}{\cdot}}
+\newcommand{\bra}{{\bf \ra}}
+\newcommand{\blra}{{\bf \lra}}
+\newcommand{\ban}{{\bf \&}}
+\newcommand{\bor}{{\bf \nabla}}
+\newcommand{\bmt}{{\bf \mt}}
+\newcommand{\bjn}{{\bf \jn}}
+\newcommand{\bneg}{{\bf \neg}}
+\newcommand{\bbot}{{\bf \bot}}
+\newcommand{\btop}{{\bf \top}}
+\newcommand{\entails}{\vdash}
+\newcommand{\TM}{{\mbox{{Turing Machine }}}}
+\newcommand{\TMs}{{Turing Machines }}
+\newcommand{\MM}{{Minskii Machine }}
+\newcommand{\RA}{\Ra}
+\newcommand{\rla}{{relation algebra }}
+\newcommand{\rlas}{{relation algebras }}
+\newcommand{\cv}{ ^{ \cup } }
+\newcommand{\cg}{{\rm Cg}}                          %Petar
+\newcommand{\var}[1]{{\uppercase \mathcal{{#1}}}}      %Petar
+\newcommand{\Lg}{{\mbox{$\mathcal{LG} $}}}             %Partick
+\newcommand{\Lgm}{{\mbox{$\mathcal{LG}^- $}}}          %Partick
+\newcommand{\phibar}{{\mbox{$\ol \phi\ $}}}         %Partick
+\newcommand{\vrm}{{\mbox{$\mathcal{V}^- $}}}           %Partick
+\newcommand{\Ya}{\Rightarrow}
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\cleq}{\preceq}
+\newcommand{\hra}{\rightharpoonup}
+\renewcommand{\ln}{\mathord{\sim}}
+\newcommand{\rn}{\mathord{-}}
+\newcommand{\lrh}{\mathop{\leftrightarrow}}
+\providecommand{\semsb}{\ensuremath{\mathscr{M}}}
+\providecommand{\sem}[1]{\ensuremath{\semsb (#1)}} 
+\newcommand{\alhack}{\\[-\normalbaselineskip]\tag*{\qedhere}}
+\providecommand{\psetsb}{\ensuremath{\mathscr{P}}}
+\providecommand{\pset}[1]{\ensuremath{\psetsb (#1)}} 
+\providecommand{\pfin}[1]{\ensuremath{\psetsb_{\text{fin}}(#1)}}
+
+\newcommand{\co}{\mathsf} %fontshape for class operators
+\newcommand{\cl}{\mathcal} %fontshape for general classes
+\newcommand{\RL}{\va{RL}}
+\DeclareMathOperator{\Mod}{Mod}
+\newcommand{\bl}{\boldsymbol{\Lambda}}
+
+% Macros for FL
+\newcommand{\al}{\alpha}
+\newcommand{\sig}{\Sigma}
+\newcommand{\lam}{\Lambda}
+\newcommand{\gam}{\Gamma}
+\newcommand{\del}{\Delta}
+\newcommand{\im}{\rightarrow}
+\newcommand{\ya}{\rightarrow}
+\newcommand{\naraba}{\rightarrow}
+\newcommand{\To}{\vdash}
+%\newcommand{\lan}{\left(} %not \la
+%\newcommand{\ran}{\right)} %not \ra
+%\newcommand{\Ya}{\Rightarrow}
+\newcommand{\noi}{\noindent}
+%\newcommand{\preast}{{\preceq}^{\ast}}
+%\newcommand{\prestar}{{\preceq}^{\star}}
+\newcommand{\epsi}{\varepsilon}
+\newcommand{\e}{\varepsilon}
+
+\newcommand{\p}{\vskip 12pt}
+\newcommand{\q}{\vskip 6pt}
+
+
+\newcommand{\btl}{\lhd}%{\triangleleft}{\blacktriangleleft}
+\newcommand{\btr}{\rhd}%{\triangleright}{\blacktriangleright} 
+\newcommand{\eb}[1]{\emph{\textcolor{blue}{#1}}}       
+\newcommand{\cb}[1]{\textcolor{blue}{#1}} 
+\newcommand{\cred}[1]{\textcolor{red}{#1}}        
+\newcommand{\ldd}{\mathbin{\bbslash}}
+\newcommand{\rdd}{\mathbin{\sslash}}  
+\newcommand{\raa}{\mathbin{\leadsto}}    
+\newcommand{\RarN}{{\sqsubseteq}}  %{{\mathrel{N}}} 
+\newcommand{\RaN}{\mathnormal{\RarN}}
+
+\newcommand{\va}{\mathsf} %fontshape for specific varieties  
+\newcommand{\cnv}{u}
+
+\renewcommand{\And}{\text{ \sf and }} %already exists in LaTeX
+\newcommand{\Or}{\text{ \sf or }}
+\newcommand{\AND}{\text{\sf{AND }}}
+\newcommand{\bcdw}{\mbox{\boldmath{$\,\cdot\,$}}}
+
+
+\renewcommand{\and}{\text{ \sf and }}
+\newcommand{\orc}{\text{ \sf or }}
+\newcommand{\orb}{\ \overline{\mbox{\sf or}}\ }
+\newcommand{\Implies}{\Longrightarrow}
+\providecommand{\undsc}{\underline{\phantom{x}}}
+
+\newcommand{\gal}[1]{#1^+}
+
+\newcommand{\force}{\vdash}
+\def\hh{\ |\ }
+\newcommand{\FL}{\mbox{$\mbox{\bf FL}$}}
+
+\newcommand{\ls}{\setbox0\hbox{$-$}
+\mathbin{\hbox{$-$\kern-\wd0\raise2\dp0\hbox{$\cdot$}\kern.3\wd0\lower2\dp0\hbox
+{$\cdot$}}}}
+\newcommand{\rs}{\setbox0\hbox{$-$}
+\mathbin{\hbox{$-$\kern-\wd0\lower2\dp0\hbox{$\cdot$}\kern.3\wd0\raise2\dp0\hbox
+{$\cdot$}}}}
+
+\newcommand{\rdo}{\mathop{\mbox{$\bigcirc \! \! \! \! \! \rdd \, $}}}
+\newcommand{\ldo}{\mathop{\mbox{$\bigcirc \! \! \! \! \! \ldd \, $}}}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+%Lattices 
+\providecommand{\MEET}{\ensuremath{\bigwedge}}
+\providecommand{\Meet}{\ensuremath{\textstyle\bigwedge\limits}}
+\providecommand{\Join}{\ensuremath{\bigvee}}
+\providecommand{\meet}{\ensuremath{\wedge}}
+\providecommand{\join}{\ensuremath{\vee}}
+
+%Set Theory
+\providecommand{\card}[1]{\ensuremath{\left\lvert#1\right\rvert}}
+\providecommand{\intersect}{\ensuremath{\cap}}
+\providecommand{\Intersect}{\ensuremath{\bigcap}}
+\providecommand{\union}{\ensuremath{\cup}}
+\providecommand{\UNION}{\ensuremath{\bigcup}}
+\providecommand{\Union}{\ensuremath{\textstyle\bigcup\limits}}
+%Logic
+\providecommand{\iff}{\ensuremath{\Leftrightarrow}}
+\providecommand{\implies}{\ensuremath{\Rightarrow}}
+
+%Algebra
+\providecommand{\normal}{\ensuremath{\unlhd}}
+\providecommand{\embed}{\ensuremath{\hookrightarrow}}%inclusion map
+\providecommand{\gen}[1]{\ensuremath{\left<#1\right>}}%Group generated by #1
+\providecommand{\idx}[2]{\ensuremath{\left[#1:#2\right]}}%index of #2 in #1
+\providecommand{\order}[1]{\ensuremath{\left\lvert#1\right\rvert}}
+
+%Commonly used Sets
+\providecommand{\C}{\ensuremath{\mathbb{C}}}%complex
+\providecommand{\N}{\ensuremath{\mathbb{N}}}%natural
+\providecommand{\Q}{\ensuremath{\mathbb{Q}}}%rationals
+\providecommand{\R}{\ensuremath{\mathbb{R}}}%reals
+\providecommand{\Z}{\ensuremath{\mathbb{Z}}}%integers
+\providecommand{\Zpos}{\ensuremath{\mathbb{Z}^{+}}}%positive integers
+
+%functions
+\providecommand{\restrictedto}{\ensuremath{\downharpoonright}}
+
+%Analysis and lineal algebra
+\providecommand{\norm}[1]{\ensuremath{\left\lVert#1\right\rVert}}
+\providecommand{\vect}{\ensuremath{\vec}}
+
+%Miscellaneous
+\providecommand{\abs}[1]{\ensuremath{\left\lvert#1\right\rvert}}
+\providecommand{\define}{\ensuremath{\stackrel{\text{\tiny def}}{=}}}
+
+%number theory
+\providecommand{\floor}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
+\providecommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
+
+%Miscellaneous shortcuts
+\providecommand{\lcm}{\ensuremath{\text{lcm}}}%least common multiple
+\providecommand{\st}{\ensuremath{\backepsilon}}
+
+%Presentation dependant
+\newcommand{\ccdot}{\bullet}
+
+\newcommand\g[1]{g_{\bf{#1}}}
+\newcommand\f[1]{f_{\bf{#1}}}
+\newcommand{\gb}{\g{B}}
+\newcommand{\gc}{\g{C}}
+\newcommand{\fb}{\f{B}}
+\newcommand{\fc}{\f{C}}
+
+
+\usefonttheme[onlymath]{serif}
+\usetheme{CambridgeUS} % My favorite!
+%with an extra region at the top.
+\useoutertheme[subsection=false]{miniframes}%smoothbars}
+\definecolor{CrimsonRed}{rgb}{.5882,0,.1804} 
+\definecolor{Gold}{rgb}{.6588,.6,.4313}
+\definecolor{gold}{HTML}{997316}
+\definecolor{Tan}{HTML}{BFB254}%{997316}
+%\usecolortheme[named=Tan]{structure} %
+%\setbeamercovered{invisible}
+%\useoutertheme[right, width=1.8cm]{sidebar}
+%\useinnertheme{circles}
+
+\setbeamercolor{palette primary}{fg=CrimsonRed, bg=gold!45!white}
+\setbeamercolor{palette sidebar primary}{fg=CrimsonRed} %, bg=gold!20!white}
+\setbeamercolor{palette sidebar secondary}{fg=CrimsonRed!90!white}%, bg=gold!18!white}
+\setbeamercolor{palette secondary}{fg=CrimsonRed, bg=Gold!30!white}
+\setbeamercolor{palette tertiary}{fg=white!80!gold, bg=CrimsonRed}
+\setbeamercolor{frametitle}{fg=CrimsonRed, bg=gold!05!white}
+\setbeamercolor{title}{fg=gold!40!white, bg=CrimsonRed}
+\setbeamercolor{item projected}{bg=Gold!70!white}
+ \setbeamercolor{itemize item}{bg=Gold!20!white}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor{block title}{fg=CrimsonRed,bg=gold!35!white}
+\setbeamercolor{block body}{fg=black,bg=gold!7!white}
+\setbeamercolor{local structure}{fg=Tan!50!white!70!black, }
+\setbeamercolor{block title example}{bg=gold!30!white, fg=CrimsonRed}
+\setbeamercolor{block body example}{bg=gold!07!white}
+%\usecolortheme{sidebartab}
+
+% To remove the navigation symbols from 
+% the bottom of slides%
+\setbeamertemplate{navigation symbols}{} 
+%
+\usepackage{graphicx}
+%\usepackage{bm}         % For typesetting bold math (not \mathbold)%
+%\titlegraphic{\includegraphics[height=1cm]{DU}}
+%
+
+\setbeamertemplate{caption}[numbered]
+\DeclareMathOperator*{\bigor}{OR}
+\newcommand{\bb}[1]{\mathbb {#1}}
+\usepackage{setspace}
+
+\title[Unilinear residuated lattices]{Unilinear residuated lattices}
+\author[Xiao Zhuang]{Xiao Zhuang\\
+  \small{Advisor: Nikolaos Galatos} }
+\institute[University of Denver]
+{University of Denver}
+\date{Thesis defense\\
+May 2023}
+% \today will show current date. 
+% Alternatively, you can specify a date.
+% \titlegraphic{\includegraphics[]{}}
+%BEAMER HACKS
+
+
+%Backgroundcolor
+%\setbeamercolor{background canvas}{bg=gold!09!white}
+
+
+
+\begin{document}
+
+
+%\begin{frame}[plain]
+%\hspace*{1cm}\parbox[t]{\textwidth}{	
+%\titlepage
+%}
+%\end{frame}
+
+
+\begin{frame}[plain]{}
+%\advance\textwidth1.7cm
+\hsize\textwidth
+\columnwidth\textwidth
+\maketitle
+
+\end{frame}
+
+%\section{Introduction}
+
+\begin{frame}{Integer divided by $45$}
+    
+\end{frame}
+
+
+
+
+\end{document} 
